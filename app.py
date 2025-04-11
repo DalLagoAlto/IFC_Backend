@@ -4,7 +4,7 @@ import ifcopenshell
 import os
 
 app = Flask(__name__)
-CORS(app, origins=["https://ifc-frontend.vercel.app"])
+CORS(app, resources={r"/*": {"origins": "https://ifc-frontend.vercel.app"}})
 
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
